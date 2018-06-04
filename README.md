@@ -27,7 +27,7 @@ The FlowFile with 'text.line.count' is now routed to AttributesJSON which replac
 
 The re-written FileFile is now passed to PutFile and written out to the filesystem in ./data-out. The filename will be the same as the original input file. The content of the file will contain a value for 'text.line.count' which is the number of logs in the input file for HTTP GET requests.
 
-I could inprove on this by renaming the 'text.line.count' attribute to something like 'http.method.get.count', probably using the UpdateAttribute Processor. I would also like to figure out how to include the core FlowFile attributes in the AttributesJSON output (bug in that Processor?).
+I could improve on this by renaming the 'text.line.count' attribute to something like 'http.method.get.count', probably using the UpdateAttribute Processor. I would also like to figure out how to include the core FlowFile attributes in the AttributesJSON output (bug in that Processor?).
 
 An enhancement would be to dynamically identify each distinct HTTP method present in the input logs files and then provide dynamic FlowFile attributes that are counts of the occurences of each one.
 
